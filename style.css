@@ -43,7 +43,7 @@ body {
       minmax(205px, 25%) minmax(205px, 25%) minmax(205px, 23%)
       minmax(205px, 23%);
     grid-template-rows: repeat(2, 50%);
-    margin: 7% 7% 0 7%;
+    margin: 7% 7% 7% 7%;
     grid-gap: 2rem;
   }
 }
