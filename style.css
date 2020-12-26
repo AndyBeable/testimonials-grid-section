@@ -1,3 +1,217 @@
+/* --- GLOBALS --- */
 * {
-  background-color: blue;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 13px;
+}
+
+body {
+  background-color: var(--super-light-grey);
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+/* --- COLORS --- */
+:root {
+  --white: #ffffff;
+  --dark-grey: #48556a;
+  --light-grey: #cfcfcf;
+  --super-light-grey: #ecf2f8;
+  --dark-purple: #733fc8;
+  --light-purple: #a775f1;
+  --dark-blue: #19202d;
+}
+
+/* -- UTILS -- */
+
+.margin-sml {
+  margin-bottom: 1.6rem;
+}
+
+/* -- GENERAL -- */
+.main-grid {
+  margin: 4.5rem 1.5rem;
+}
+
+@media screen and (min-width: 700px) {
+  .main-grid {
+    display: grid;
+    grid-template-columns:
+      minmax(205px, 25%) minmax(205px, 25%) minmax(205px, 23%)
+      minmax(205px, 23%);
+    grid-template-rows: repeat(2, 50%);
+    margin: 7% 7% 0 7%;
+    grid-gap: 2rem;
+  }
+}
+
+.tile {
+  padding-top: 1.6rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-shadow: 0px 10px 48px -15px rgba(0, 0, 0, 0.75);
+}
+
+.tile-large {
+  border-radius: 0.5rem;
+  margin-bottom: 2.4rem;
+}
+
+@media screen and (min-width: 700px) {
+  .tile-large {
+    margin-bottom: 0;
+  }
+}
+
+.tile-small {
+  border-radius: 0.5rem;
+  margin-bottom: 2.4rem;
+}
+
+@media screen and (min-width: 700px) {
+  .tile-small {
+    margin-bottom: 0;
+  }
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.8rem;
+}
+
+.profile-name-light {
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+.profile-name-dark {
+  color: var(--dark-grey);
+  margin-bottom: 0.4rem;
+}
+
+.verified-light {
+  font-weight: 500;
+  line-height: 10px;
+  opacity: 50%;
+  color: var(--white);
+}
+.verified-dark {
+  font-weight: 500;
+  line-height: 10px;
+  opacity: 50%;
+  color: var(--dark-grey);
+}
+
+.profile-copy-light {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: var(--light-grey);
+  opacity: 70%;
+  padding-bottom: 0.5rem;
+}
+.profile-copy-dark {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: var(--dark-grey);
+  opacity: 70%;
+}
+
+.profile-quote-light {
+  color: var(--white);
+  font-size: 1.8rem;
+}
+.profile-quote-dark {
+  color: var(--dark-grey);
+  font-size: 1.8rem;
+}
+
+/* --- TILE SPECIFIC --- */
+
+/* -- TILE 1 -- */
+.tile1 {
+  background-color: var(--dark-purple);
+  background-image: url("/images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: right 5vw top 0;
+  background-size: 37%;
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+}
+
+@media screen and (min-width: 700px) {
+  .tile1 {
+    background-image: url("/images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: right 5vw top 0;
+    background-size: 25%;
+  }
+}
+
+/* --- TO DO 
+box shadow on cards
+grid row gap change
+
+*/
+
+.profile-image1 {
+  border-radius: 100%;
+  margin-right: 1.7rem;
+  border: 3px solid var(--light-purple);
+}
+
+/* -- TILE 2 -- */
+
+.tile2 {
+  background-color: var(--dark-grey);
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+}
+
+.profile-image2 {
+  border-radius: 100%;
+  margin-right: 1.7rem;
+  border: 3px solid inherit;
+}
+
+/* -- TILE 3 -- */
+.tile3 {
+  background-color: var(--white);
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+
+.profile-image3 {
+  border-radius: 100%;
+  margin-right: 1.7rem;
+  border: 3px solid inherit;
+}
+
+/* -- TILE 4 -- */
+.tile4 {
+  background-color: var(--dark-blue);
+  grid-row: 2 / 3;
+  grid-column: 2 / 4;
+}
+
+.profile-image4 {
+  border-radius: 100%;
+  margin-right: 1.7rem;
+  border: 3px solid var(--light-purple);
+}
+
+/* -- TILE 5 -- */
+.tile5 {
+  background-color: var(--white);
+  grid-row: 1 / 3;
+  grid-column: 4 / 5;
+}
+
+.profile-image5 {
+  border-radius: 100%;
+  margin-right: 1.7rem;
+  border: 3px solid inherit;
 }
